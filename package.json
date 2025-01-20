@@ -12,14 +12,14 @@
     "@playwright/test": "^1.49.1",
     "@types/node": "^22.10.1",
     "ts-node": "^10.9.2",
-    "tsx": "^4.19.2"
+    "tsx": "^4.19.2",
+    "typescript": "^5.7.3"
   },
   "compilerOptions": {
     "noUnusedLocals": false,
-      "module": "ESNext",
-      "target": "ES6",
-      "strict": true,
-      "esModuleInterop": true
-    
+    "module": "ESNext",
+    "target": "ES6",
+    "strict": true,
+    "esModuleInterop": true
   }
 }
