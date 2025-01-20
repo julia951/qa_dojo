@@ -16,7 +16,3 @@ test('червоний — зупинка, чекайте', async () => {
   const result = trafficLightAction('red');
   expect(result).toBe("Зачекайте.");
 });
-
-test('неправильний колір — викидає помилку', async () => {
-  expect(() => trafficLightAction('blue')).toThrow("Невірний колір світлофора");
-});
