@@ -20,7 +20,7 @@ test.afterEach(async () => {
   await browser.close();
 });
 
-async function purchase(page:Page, usernameText:string, emailText:string) {
+async function purchase(page: Page, usernameText: string, emailText: string) {
 
   const nameInput = page.locator('[name="name"]');
   const emailInput = page.locator('[type="email"]');
@@ -64,10 +64,9 @@ async function clickRemoveIcon(page: Page) {
   await deleteIcon.click();
 }
 
-test('CC-001 Test successful order espresso Coffees', async () => {
- 
-  const successText = "Thanks for your purchase. Please check your email for payment.";
+test('CC-001 Test successful order espresso Coffee', async () => {
 
+  const successText = "Thanks for your purchase. Please check your email for payment.";
   const successMsg = page.locator('[class="snackbar success"]');
 
   espressoClick(page);
@@ -78,9 +77,8 @@ test('CC-001 Test successful order espresso Coffees', async () => {
 });
 
 test('CC-002 Test successful order Multiple Coffees', async () => {
- 
-  const successText = "Thanks for your purchase. Please check your email for payment.";
 
+  const successText = "Thanks for your purchase. Please check your email for payment.";
   const successMsg = page.locator('[class="snackbar success"]');
 
   espressoClick(page);
@@ -101,7 +99,7 @@ test('CC-003 Test Changing items By Plus Button', async () => {
   espressoClick(page);
   espressoClick(page);
   hoverCheckout(page);
-  
+
   await expect(checkout).toContainText(totalPtice);
   await expect(quantityText).toContainText('x 2');
 });
@@ -126,7 +124,6 @@ test('CC-005 Test Deleting Item from Cart Tab', async () => {
   await clickRemoveIcon(page);
 
   await expect(deleteIcon).toContainText('No coffee, go add some.');
-
 });
 
 test('CC-006 Test Lucky Banner', async () => {
