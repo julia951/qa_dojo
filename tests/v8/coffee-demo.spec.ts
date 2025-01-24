@@ -148,3 +148,18 @@ test('CC-007 Test Closing Cart with Full Items', async () => {
 
   await expect(checkout).toContainText(totalPtice);
 });
+
+
+test('CC-008 Total Price All Items', async () => {
+
+  const totalPtice = 'Total: $119.00';
+  const checkout = page.locator('[data-test="checkout"]');
+  const cupLocator = page.locator("//*[@class='cup-body' and @class != 'disabled-hover']");
+  const cupAllLocators = await cupLocator.all();
+
+  for (const cupLocator of cupAllLocators){
+    await cupLocator.click();
+  }
+
+  await expect(checkout).toContainText(totalPtice);
+});
