@@ -1,5 +1,5 @@
 import { test, expect, Page } from "@playwright/test";
-import { RegisterPage } from "./RegisterPage";
+import { RegisterPage } from "./Register.Page";
 
 const authData = [
     {

@@ -1,5 +1,5 @@
 import test, { expect } from "@playwright/test";
-import { CoffeeCartPage } from "./CoffeeCartPage";
+import { CoffeeCartPage } from "./CoffeeCart.Page";
 
 const usernameText = "Julka";
 const emailText = "julka@test.com";
