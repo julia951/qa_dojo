@@ -1,4 +1,4 @@
-import test, { expect, Locator, Page } from "@playwright/test";
+import{ test,  expect, Locator, Page } from "@playwright/test";
 
 export class RegisterPage {
   private page: Page;
@@ -23,7 +23,7 @@ export class RegisterPage {
   }
 
   async navigate() {
-    await this.page.goto("https://demoqa.com/automation-practice-form", { waitUntil: "networkidle" });
+    await this.page.goto("https://demoqa.com/automation-practice-form");
   }
 
   async fillRegisterForm(registerData: { firstName: string, lastName: string, telephoneNumber: string }) {

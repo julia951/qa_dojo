@@ -1,10 +1,10 @@
-import test, { expect, Page } from "@playwright/test";
+import{ test,  expect, Locator, Page } from "@playwright/test";
 
 export class CoffeeCartPage {
   constructor(private page: Page) {}
 
   async navigate() {
-    await this.page.goto("https://coffee-cart.app/", { waitUntil: "networkidle" });
+    await this.page.goto("https://coffee-cart.app/");
   }
 
   async clickOnEspresso() {
