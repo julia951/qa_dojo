@@ -33,7 +33,6 @@ export class HomePage {
   readonly signUpLink: Locator;
   readonly demoSpan: Locator;
   readonly buttons: Locator;
-  readonly btns: Locator;
 
   constructor(page: Page) {
     this.page = page;
